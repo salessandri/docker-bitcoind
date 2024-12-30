@@ -1,5 +1,7 @@
 # `docker-bitcoind` Project
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/salessandri/bitcoind.svg)](https://hub.docker.com/r/salessandri/bitcoind) [![Docker Stars](https://img.shields.io/docker/stars/salessandri/bitcoind.svg)](https://hub.docker.com/r/salessandri/bitcoind)
+
 Docker image that runs the `bitcoind` node in a container for easy deployment.
 
 The binary is compiled from source by pulling it from the [Bitcoin Core website](https://bitcoincore.org/).
