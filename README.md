@@ -40,6 +40,7 @@ docker run -d \
    -p 127.0.0.1:8332:8332 \ # Only accept RPC from localhost
    --restart unless-stopped \
    salessandri/bitcoind \
+      /usr/local/bin/bitcoind \
       -disablewallet=1
 ```
 
@@ -60,7 +61,8 @@ docker run -d \
    -p 127.0.0.1:8332:8332 \
    --restart unless-stopped \
    salessandri/bitcoind \
-      -disablewallet=1
+      /usr/local/bin/bitcoind \
+      -disablewallet=1 \
       -txindex=1 \
       -natpmp=1
 ```
@@ -91,6 +93,8 @@ docker run -d \
    -p 127.0.0.1:8332:8332 \
    --restart unless-stopped \
    salessandri/bitcoind \
+      /usr/local/bin/bitcoind \
+      -printtoconsole=1 \
       -conf=/etc/bitcoin.conf
 ```
 
@@ -100,7 +104,7 @@ An example what this file can contain can be found in `/usr/local/share/bitcoin.
 
 If instead of using the pre-built images you prefer to build it from source that can be done by issuing the following command from the root of this repo:
 
-```
+```bash
 docker buildx build --load -t bitcoin -f docker/Dockerfile .
 ```
 
